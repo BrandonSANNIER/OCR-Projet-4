@@ -34,7 +34,7 @@ class Chapitres extends Controller{
         $chapitre = $this->Chapitre->findBySlug($slug);
         $comments = $this->Comment->getComments($chapitre['id']);
 
-        // Incteencie la fonction pour ajouter un commentaire
+        // Inctencie la fonction pour ajouter un commentaire
         $this->addComment();
 
         $this->render('lecture', compact('chapitre', 'comments'));
@@ -55,7 +55,6 @@ class Chapitres extends Controller{
             $this->Comment->addComment($_POST);
             $chapitre = $this->Chapitre->findById($_POST['id_chapt']);
             header('Location: lecture/'.$chapitre['slug'].'');
-            //echo "<span style='colore:green'>Votre commentaire a bien été posté</span>";
         }  
     }
 }

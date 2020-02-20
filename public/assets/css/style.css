@@ -1275,4 +1275,98 @@ footer ul li span {
             transform: translateX(-2px);
   }
 }
+
+/*------------------------CONTENT_LOGIN--------------------------*/
+#bg_login {
+  background-image: url("/jean-forteroche/public/assets/img/admin/bg_login.jpg");
+  background-position: left;
+  background-size: cover;
+  z-index: -1;
+  height: 100vh;
+}
+
+.content_login {
+  z-index: 1;
+  width: 30%;
+  position: absolute;
+  top: 0;
+  display: block;
+  margin: 10% 35%;
+  background-color: #EEEEEE;
+  border-radius: 10px;
+}
+
+.content_login img {
+  margin: 15% 0 5% 0;
+  display: block;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content_login form {
+  margin: 15% 0;
+}
+
+.content_login form label {
+  margin-left: 12%;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #696969;
+}
+
+.content_login form input[type=text], .content_login form input[type=password] {
+  margin-left: 12%;
+  width: 400px;
+  padding: 10px;
+  border: solid 1px #c7c7c7;
+  border-radius: 3px;
+  background-color: #EEEEEE;
+}
+
+.content_login form input[type=text] {
+  margin-bottom: 3%;
+}
+
+.content_login form #remember {
+  margin-top: 3%;
+  margin-left: 12%;
+  margin-bottom: 0;
+  border: solid 1px #c7c7c7;
+  background-color: #EEEEEE;
+  color: #EEEEEE;
+  width: 15px;
+  height: 15px;
+}
+
+.content_login form #cbox_rememmber {
+  margin-left: 0;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #696969;
+}
+
+.content_login form input[type=submit] {
+  cursor: pointer;
+  margin-top: 5%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  text-align: center;
+  padding: 10px;
+  border: 0;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-family: "Open Sans";
+  background-color: #212121;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #EEEEEE;
+}
 /*# sourceMappingURL=style.css.map */
