@@ -37,7 +37,7 @@ abstract class Model{
      * @return void
      */
     public function getOne($id){
-        $sql = "SELECT *, DATE_FORMAT(date, '%D %b %Y') AS 'date_formater' FROM ".$this->table." WHERE id=".$this->id;
+        $sql = "SELECT * AS 'date_formater' FROM ".$this->table." WHERE id=".$this->id;
         $query = $this->_connexion->prepare($sql);
         $query->execute();
         return $query->fetch();    
@@ -49,22 +49,9 @@ abstract class Model{
      * @return void
      */
     public function getAll(){
-        $sql = "SELECT *, DATE_FORMAT(date, '%d %M, %Y') AS 'date_formater' FROM ".$this->table;
+        $sql = "SELECT *, DATE_FORMAT(date, '%d/%m/%Y') AS 'date_formater' FROM ".$this->table;
         $query = $this->_connexion->prepare($sql);
         $query->execute();
         return $query->fetchAll();    
-    }
-
-    /**
-     * Méthode permettant d'obtenir un nombre limité de table
-     *
-     * @param string $limit
-     * @return void
-     */
-    public function getLimited(string $limit){
-        $sql = "SELECT *, DATE_FORMAT(date, '%D %b %Y') AS 'date_formater' FROM".$this->table."ORDER BY id=".$this->id."DESC LIMIT ".$limit;
-        $query = $this->_connexion->prepare($sql);
-        $query->execute();
-        return $query->fetchAll();  
     }
 }

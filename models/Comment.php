@@ -8,6 +8,15 @@ class Comment extends Model{
         // Connexion à la base de données
         $this->getConnection();
     }
+
+    function addComment($datas){
+        $first_name = htmlspecialchars($datas['first_name']);
+        $last_name = htmlspecialchars($datas['last_name']);
+        $comment = htmlspecialchars($datas['comment']);
+        $chapitre_id = htmlspecialchars($datas['id_chapt']);
+        $ins = $this->_connexion->query("INSERT INTO comments (`id`, `chapitre_id`, `first_name`, `last_name`, `comment`) 
+        VALUES (null, '".$chapitre_id."', '".$first_name."', '".$last_name."', '".$comment."')");
+    }
     
     /**
      * Cette méthode récupére les commentaires
@@ -15,26 +24,13 @@ class Comment extends Model{
      * @return void
      */
     function getComments($id){
-        $sql = "SELECT * FROM '".$this->table."' WHERE chapitre_id = '".$id."'  ORDER BY comment_date DESC";
-        $query = $this->_connexion->prepare($sql);
-        $query->execute();
-        return $query->fetch(PDO::FETCH_ASSOC); 
+        $sql = "SELECT * FROM ".$this->table." WHERE chapitre_id='".$id."' ORDER BY $id DESC";
+        $query = $this->_connexion->query($sql);
+        $arrayComments = array();
+        while($test = $query->fetch(PDO::FETCH_ASSOC))
+        {
+            array_push($arrayComments, array('data' => ((array)$test)));
+        }
+        return $arrayComments; 
     }
-    
-    /**
-     * Cette méthode permmet de poster un commentaire
-     *
-     * @param  mixed $chapitre_id
-     * @param  mixed $first_name
-     * @param  mixed $last_name
-     * @param  mixed $comment
-     *
-     * @return void
-     */
-    /* function addComment($chapitre_id, $first_name, $last_name, $comment){
-        $sql = 'INSERT INTO comments(chapitre_id, first_name, last_name, comment) VALUES(?, ?, ?, ?)';
-        $query = $this->_connexion->prepare($sql);
-        $query->execute();
-        return $query->fetch(PDO::FETCH_ASSOC); 
-    } */
 } 

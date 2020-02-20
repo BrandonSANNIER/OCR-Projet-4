@@ -20,17 +20,18 @@
 <div class="comment">
     <h3><span id="nbComment"></span>&nbsp;Commentaires</h3>
     <button id="btn_add_comment">Ajouter un commentaire</button>
-    <form methode="POST" class="add_comment">
-        <input type="text" name="firt_name" placeholder="Nom" required>
+    <form method="POST" action="../addComment" class="add_comment">
+        <input type="hidden" name="id_chapt" value="<?= $chapitre['id']; ?>">
+        <input type="text" name="first_name" placeholder="Nom" required>
         <input type="text" name="last_name" placeholder="Prénom" required>
         <textarea name="comment" cols="30" rows="10" placeholder="Votre commentaire" required></textarea>
-        <input type="submit" value="Publier">
+        <input type="submit" name="submit_comment" value="Publier">
     </form> 
 
     <?php foreach($comments as $comment): ?>
-    <div class="slot_comment">
-        <p id="user"><?= $comment['first_name']?>&nbsp;<?= $comment['last_name']?>&nbsp;&nbsp;<span id="date"><?= $comment['date']?></span><span id="report" title="signaler le commentaire">...</span></p> <p id="content_comment"><?= $comment['comment']?></p>
-    </div>
-    <?php if(isset($_msg)) { echo $_msg; } ?>
+        <div class="slot_comment">
+            <p id="user"><?php echo $comment['data']["first_name"]; ?>&nbsp;<?= $comment['data']['last_name']?>&nbsp;&nbsp;<span id="date"><?= date('d/m/Y', strtotime($comment['data']['date'])); ?></span><span id="report" title="signaler le commentaire">...</span></p> <p id="content_comment"><?= $comment['data']['comment']; ?></p>
+        </div>
+        <?php if(isset($_msg)) { echo $_msg; } ?>
     <?php endforeach; ?>
 </div>

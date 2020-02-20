@@ -8,6 +8,7 @@ swup.on('contentReplaced', () => {
   nbComment = $('.slot_comment').length;
 
   btnComment.on('click', () =>{
+    console.log("show comment")
     $(".add_comment").show(500);
     $("#btn_add_comment").hide();
   });

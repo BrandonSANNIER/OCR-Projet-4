@@ -18,7 +18,7 @@ class Chapitres extends Controller{
     }
 
     /**
-     * Méthode affiche un chapitre à partir de son slug
+     * Méthode qui permet d'afficher un chapitre à partir de son slug
      *
      * @param string $slug
      * 
@@ -29,27 +29,33 @@ class Chapitres extends Controller{
         $this->loadModel('Chapitre');
         $this->loadModel('Comment');
 
-        // Stocke les commentaire dans $comments et
+        // Stocke les commentaires dans $comments et
         // le slug dans $chapitre
         $chapitre = $this->Chapitre->findBySlug($slug);
-        $comments = $this->Comment->getComments($id);
+        $comments = $this->Comment->getComments($chapitre['id']);
 
+        // Incteencie la fonction pour ajouter un commentaire
         $this->addComment();
 
         $this->render('lecture', compact('chapitre', 'comments'));
     }
 
+    /**
+     * Cette methode permet d'ajouter un commentaire
+     *
+     * @return void
+     */
     public function addComment(){
+        // Instancie le modèle "Chapitre" et "Comment"
+        $this->loadModel('Chapitre');
+        $this->loadModel('Comment');
 
-        if(isset($_POST['submit_commentaire'])) {
-            if(isset($_POST['first_name'], $_POST['last_name'], $_POST['comment']) AND !empty($_POST['first_name']) AND !empty($_POST['first_name']) AND !empty($_POST['comment'])) {
-                $first_name = htmlspecialchars($_POST['first_name']);
-                $last_name = htmlspecialchars($_POST['last_name']);
-                $comment = htmlspecialchars($_POST['comment']);
-                $ins = $bdd->prepare('INSERT INTO comment (first_name, last_name, comment, chapitre_id) VALUES (?,?,?,?)');
-                $ins->execute(array($first_name, $last_name, $commentaire, $chapitre_id));
-                $_msg = "<span style='color:green'>Votre commentaire a bien été posté</span>";
-            }
-        }
+        // Si le formulaire et remplie
+        if(!empty($_POST['submit_comment']) AND !empty($_POST['first_name']) AND !empty($_POST['last_name']) AND !empty($_POST['comment']) AND !empty($_POST['id_chapt'])) {
+            $this->Comment->addComment($_POST);
+            $chapitre = $this->Chapitre->findById($_POST['id_chapt']);
+            header('Location: lecture/'.$chapitre['slug'].'');
+            //echo "<span style='colore:green'>Votre commentaire a bien été posté</span>";
+        }  
     }
 }
