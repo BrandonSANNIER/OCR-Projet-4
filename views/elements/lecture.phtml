@@ -1,0 +1,36 @@
+<div class="bg_chapitre rellax" data-rellax-speed="1" style="background-image: url('<?= $chapitre['src_full'] ?>')">
+    <h1>Chapitre <?= $chapitre['id']?></h1>
+    <h2>“Billet simple pour l'Alaska”</h2>
+    <p id="date"><?= $chapitre['date_formater']?></p>
+</div>
+<div id="fil_ariane">
+    <a href="/jean-forteroche">accueil</a>
+    <p>&nbsp;<&nbsp;</p> <a href="/jean-forteroche/chapitres">chapitres</a>
+            <p>&nbsp;<&nbsp;</p> <a href="#"><?= $chapitre['slug']?></a>
+</div>
+<div class="content_chapitre">
+    <h1><?= $chapitre['title']?></h1>
+    <p><?= $chapitre['content']?></p>
+    <div class="next_prew">
+        <button id="btn_chapt_prev">Chapitre précédent<i class="fas fa-long-arrow-alt-left"></i></button>
+        <button id="btn_chapt_next"><i class="fas fa-long-arrow-alt-right"></i>Chapitre suivant</button>
+    </div>
+</div>
+
+<div class="comment">
+    <h3><span id="nbComment"></span>&nbsp;Commentaires</h3>
+    <button id="btn_add_comment">Ajouter un commentaire</button>
+    <form methode="POST" class="add_comment">
+        <input type="text" name="firt_name" placeholder="Nom" required>
+        <input type="text" name="last_name" placeholder="Prénom" required>
+        <textarea name="comment" cols="30" rows="10" placeholder="Votre commentaire" required></textarea>
+        <input type="submit" value="Publier">
+    </form> 
+
+    <?php foreach($comments as $comment): ?>
+    <div class="slot_comment">
+        <p id="user"><?= $comment['first_name']?>&nbsp;<?= $comment['last_name']?>&nbsp;&nbsp;<span id="date"><?= $comment['date']?></span><span id="report" title="signaler le commentaire">...</span></p> <p id="content_comment"><?= $comment['comment']?></p>
+    </div>
+    <?php if(isset($_msg)) { echo $_msg; } ?>
+    <?php endforeach; ?>
+</div>

@@ -1,0 +1,337 @@
+/*---------------------------VARIABLES---------------------------*/
+
+$color-black: #212121;
+$color-white: #EEEEEE;
+$color-green: #4CAF50;
+$color-grey: #E8E8E8;
+$color-grey-light: #E3E3E3;
+$color-grey-dark: #AFAFAF;
+$color-red: #F44336;
+
+/*------------------------STYLE GENERAL--------------------------*/
+
+body {
+    margin: 0;
+    background-color: $color-white;
+    font-family: 'Source Code Pro', monospace;
+}
+
+::-webkit-scrollbar-track {
+    border: 5px solid $color-white;
+    background-color: #808080;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+    background-color: #dfe6e9;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $color-black;
+    border-radius: 10px;
+}
+
+.transition-fade {
+  transition: 1s;
+  opacity: 1;
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
+}
+ 
+/*----------------------------HEADER-----------------------------*/
+
+header {
+    z-index: 10;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 2% 10% 0 10%;
+    top: 0;
+
+    .fa-bars {
+        cursor: pointer;
+        color: #fff;
+        font-size: 23px;
+        margin-right: 20px;
+    }
+
+    img {
+        width: 15%;
+    }
+}
+
+.content_header {
+    margin: 23% 10% 33vh 15%;
+    ;
+
+    .bg1 {
+        position: absolute;
+        left: 0;
+        min-height: 100vh;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        border-bottom: solid 185px $color-white;
+    }
+
+    .bg2 {
+        position: absolute;
+        left: 0;
+        min-height: 100vh;
+        top: 0;
+        z-index: -2;
+        width: 100%;
+    }
+
+    .bg3 {
+        position: absolute;
+        left: 0;
+        min-height: 100vh;
+        top: 0;
+        z-index: -3;
+        width: 100%;
+    }
+
+    h1 {
+        @include font(72px, 800, 64px, $color-white);
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    p {
+        font-family: "Open Sans";
+        width: 318px;
+        @include font(24px, 400, 24px, $color-white);
+    }
+}
+
+.rs {
+    margin-left: 10%;
+    cursor: pointer;
+    font-size: 20px;
+    color: $color-white;
+}
+
+/*----------------------------LISTE DES ROMANS-----------------------------*/
+
+.list_roman {
+    margin-top: 10%;
+
+    #list {
+        display: none;
+        margin-left: 15%;
+        width: 65%;
+
+        h1 {
+            @include font(144px, 400, 24px, $color-black);
+            font-family: "Open Sans";
+            display: inline-block;
+        }
+
+        h2 {
+            margin-left: 30px;
+            @include font(64px, 400, 60px, $color-black);
+            display: inline-block;
+            vertical-align: top;
+            text-transform: uppercase;
+            width: 55%;
+        }
+
+        i {
+            margin-left: 5.5%;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            font-size: 22px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            border: 1px solid $color-grey-dark;
+            color: $color-grey-dark;
+            height: 50px;
+            width: 50px;
+        }
+
+        .fa-angle-up {
+            border: solid 1px $color-black;
+            color: $color-black;
+            margin-top: 2%;
+            margin-bottom: 3%;
+        }
+
+        p {
+            @include font(20px, 200, 30px, $color-black);
+            position: absolute;
+            font-family: "Open Sans";
+            top: 139%;
+            left: 26.4%;
+            width: 30%;
+        }
+
+        a {
+            text-decoration: none;
+            @include font(15px, 400, 30px, $color-grey-dark);
+            font-family: "Open Sans";
+            text-transform: uppercase;
+            display: inline-flex;
+            border: 1px solid $color-grey-dark;
+            width: 40%;
+            background-color: transparent;
+            border-radius: 5%;
+            cursor: pointer;
+
+            i {
+                border: 0;
+                width: 50px;
+                height: 30px;
+                font-size: 25px;
+                color: $color-grey-dark;
+            }
+
+            &:hover {
+                color: $color-black;
+                border: solid 1px $color-black;
+
+                i {
+                    color: $color-black;
+                }
+            }
+        }
+        &:nth-child(1){
+            display: block;
+        }
+    }
+
+    #content_list {
+        position: absolute;
+        right: 0;
+        top: 105%;
+        width: 390px;
+        height: 780px;
+        border-radius: 390px 0 0 390px;
+        border: 1px solid $color-black;
+        border-right: 0;
+
+        ul {
+            right: 50%;
+            top: 25%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            position: absolute;
+            background-color: $color-green;
+            width: 380px;
+            height: 380px;
+            border-radius: 50%;
+
+            img {
+                width: 300%;
+            }
+        }
+
+        #selct_start,
+        #selct_end {
+            position: absolute;
+            right: 195px;
+            background-color: $color-black;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        #selct_start {
+            top: 6.3%;
+        }
+
+        #selct_end {
+            top: 92.5%;
+        }
+    }
+}
+
+/*----------------------------BOUTIQUE-----------------------------*/
+
+.shop {
+    margin-top: 20%;
+    width: 100%;
+    background-color: $color-grey;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0;
+        padding: 5% 15% 5% 15%;
+        list-style: none;
+
+        li {
+            p {
+                margin: 0;
+                @include font(20px, 200, 30px, $color-black);
+                font-family: "Open Sans";
+
+                #price {
+                    @include font(15px, 200, 30px, $color-black);
+                }
+            }
+
+            button {
+                @include font(13px, 300, 30px, $color-green);
+                background-color: $color-grey;
+                border: solid 1px $color-green;
+                font-weight: 100;
+                text-decoration: none;
+                user-select: none;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $color-green;
+                    color: $color-white;
+
+                    i {
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/*----------------------------FOOTEER-----------------------------*/
+
+footer {
+    padding: 2% 10% 0 10%;
+    height: 150px;
+    background-color: #D8D8D8;
+
+    img {
+        margin-top: 1.3%;
+        width: 20%;
+    }
+
+    ul {
+        padding-left: 100px;
+        float: right;
+
+        li {
+            @include font(14px, 300, 30px, $color-black);
+            font-family: "Open Sans";
+            list-style: none;
+
+            span {
+                @include font(14px, 600, 30px, $color-black);
+            }
+        }
+    }
+}
+
+
+/*-------------------------RESPONSIVE------------------*/
+
+@import "responsive";

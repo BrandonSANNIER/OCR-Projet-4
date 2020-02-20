@@ -1,0 +1,195 @@
+/*------------------------RESPONSIVE LAPTOP L--------------------------*/
+
+@media all and (max-width:1440px) {
+    .content_header {}
+
+    .list_roman {
+        margin-top: 15%;
+
+        #list {
+            margin-left: 10%;
+
+            h2 {
+
+                width: 70%;
+            }
+
+            p {
+                left: 24.6%;
+                width: 34%;
+            }
+        }
+    }
+
+    .shop {
+        margin-top: 25%;
+    }
+}
+
+/*-------------------------RESPONSIVE LAPTOP-------------------------*/
+
+@media all and (max-width:1024px) {
+    header {
+        img {
+            width: 25%;
+        }
+    }
+
+    .content_header {
+        margin-top: 35%;
+    }
+
+    .list_roman {
+        #list {
+            width: 70%;
+
+            p {
+                width: 49%;
+                top: 135%;
+                left: 30.6%;
+            }
+        }
+
+        #content_list {
+            top: 160%;
+            width: 280px;
+            height: 630px;
+
+            ul {
+                right: 40%;
+                width: 300px;
+                height: 300px;
+
+                li {
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+
+            #selct_start,
+            #selct_end {
+                right: 145px;
+            }
+
+            #selct_start {
+                top: 6.1%;
+            }
+        }
+    }
+
+    .shop {
+        margin-top: 75%;
+
+        ul {
+            li {
+                padding-right: 0;
+                padding-bottom: 40px;
+
+                img {
+                    width: 90%;
+                }
+            }
+        }
+    }
+}
+
+/*-------------------------RESPONSIVE TABLETTE------------------*/
+
+@media all and (max-width: 768px) {
+    header {
+        margin-top: 5%;
+
+        img {
+            width: 30%;
+        }
+    }
+
+    .content_header {
+        margin-top: 45%;
+        margin-bottom: 40%;
+    }
+
+    .list_roman {
+        margin-top: 15%;
+
+        #list {
+            width: 80%;
+
+            h1 {
+                font-size: 130px;
+            }
+
+            h2 {
+                width: 65%;
+                font-size: 50px;
+            }
+
+            p {
+                top: 127%;
+                left: 34.9%;
+            }
+
+            .fa-angle-up {
+                margin-top: 4%;
+            }
+        }
+    }
+
+    .shop {
+        margin-top: 105%;
+    }
+}
+
+/*-------------------------RESPONSIVE MOBILE------------------*/
+
+@media all and (max-width: 425px) {
+    body {
+        margin: 0 5% 0 5%;
+    }
+
+    header {
+        margin-top: 7%;
+
+        img {
+            width: 55%;
+        }
+    }
+
+    .content_header {
+        margin: 85% 0 35vh 0;
+    }
+
+    #rs {
+        font-size: 30px;
+    }
+
+    .list_roman {
+        #list {
+            margin-left: 0;
+            width: 100%;
+
+            h1 {
+                font-size: 105px;
+            }
+
+            h2 {
+                margin-left: 0;
+                width: 66%;
+                font-size: 30px;
+                font-weight: 500;
+            }
+
+            p {
+                top: 120%;
+            }
+
+            .fa-angle-up {
+                margin-top: 15%;
+            }
+        }
+    }
+
+    .shop {
+        margin-top: 230%;
+    }
+}

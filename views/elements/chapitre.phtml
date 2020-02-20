@@ -1,0 +1,30 @@
+<!-- CONTENT HEADER -->
+<div>
+    <div class="bg_roman rellax" data-rellax-speed="1">
+        <h1>Billet simple pour<br>l'Alaska</h1>
+    </div>
+    <div id="fil_ariane">
+        <a href="/jean-forteroche">accueil</a>
+        <p>&nbsp;<&nbsp;</p> <a href="#">chapitres</a>
+    </div>
+    <div class="content_roman">
+        <ul>
+            <?php foreach($chapitres as $chapitre): ?>
+            <li>
+                <a href="/jean-forteroche/chapitres/lecture/<?= $chapitre['slug'] ?>">
+                    <img src="<?= $chapitre['src'] ?>" alt="">
+                    <p id="date"><?= $chapitre['date_formater'] ?></p>
+                    <h1>Chapitre <?= $chapitre['id'] ?></h1>
+                    <p id="title"><?= $chapitre['title'] ?></p>
+                    <p id="resum"><?= $chapitre['resum'] ?></p>
+                </a>
+            </li>
+            <?php endforeach; ?>
+        <div class="pagination">
+            <button>01</button>
+            <button>02</button>
+            <button>03</button>
+            <button>04</button>
+        </div>
+    </div>
+</div>

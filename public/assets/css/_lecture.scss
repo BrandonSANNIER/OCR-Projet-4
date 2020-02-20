@@ -1,0 +1,182 @@
+.bg_chapitre {
+    width: 100%;
+    height: 400px;
+    background-position: 0 12%;
+    background-size: cover;
+
+    h1 {
+        @include font(64px, 600, 64px, $color-white);
+        margin: 0;
+        padding: 10% 0 0 15%;
+        text-transform: uppercase;
+    }
+
+    h2 {
+        @include font(36px, 300, 64px, $color-white);
+        margin: 0;
+        padding-left: 15%;
+        text-transform: uppercase;
+    }
+
+    #date {
+        @include font(18px, 100, 64px, $color-white);
+        margin: 0;
+        font-family: "Open Sans";
+        padding-left: 15%;
+    }
+}
+
+.content_chapitre {
+    margin: 5% 15% 5% 15%;
+
+    h1 {
+        font-family: "Open Sans";
+        @include font(48px, 200, 35px, $color-black);
+    }
+
+    p {
+        font-family: "Open Sans";
+        @include font(18px, 100, 35px, $color-black);
+    }
+
+    .next_prew {
+        margin-top: 5%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        button {
+            width: 25%;
+            cursor: pointer;
+            border: none;
+            background-color: transparent;
+            display: inline-flex;
+            align-items: center;
+            margin: 5px 0 0 0;
+            font-family: "Open Sans";
+            @include font(20px, 200, 30px, $color-grey-dark);
+
+            i {
+                margin: 0 10%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid $color-grey-dark;
+                background-color: transparent;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+            }
+
+            &:hover {
+                color: $color-black;
+
+                i {
+                    border: solid 1px $color-black;
+                }
+            }
+        }
+    }
+}
+
+.comment {
+    margin-top: 5%;
+    padding-bottom: 3%;
+    background-color: $color-grey;
+    h3 {
+        margin: 0;
+        padding: 2% 0 1% 15%;
+        font-family: "Open Sans";
+        @include font(30px, 300, 30px, $color-black);
+
+        span {
+            color: $color-red;
+        }
+    }
+
+    button {
+        float: right;
+        margin: -60px 15% 0 0;
+        font-family: "Open Sans";
+        @include font(20px, 200, 30px, $color-green);
+        border: solid 1px $color-green;
+        padding: 10px;
+        background-color: transparent;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $color-green;
+            color: $color-white;
+        }
+    }
+    .add_comment {
+        display: none;
+        margin: 1% 15% 1% 15%;
+
+        input[type=text]{
+            font-family: "Open Sans";
+            @include font(18px, 200, 30px, $color-black);
+            width: 100%;
+            margin: 1% 0;
+            border: solid 1px $color-grey-dark;
+            border-radius: 4px;
+            padding: 6px 12px;
+            height: calc(1.5em + .75rem + 2px);
+            background-color: transparent;
+        }
+
+        textarea {
+            font-family: "Open Sans";
+            @include font(18px, 200, 30px, $color-black);
+            width: 100%;
+            margin: 1% 0;
+            border: solid 1px $color-grey-dark;
+            border-radius: 4px;
+            padding: 6px 12px;
+            background-color: transparent;
+        }
+
+        input[type=submit] {
+            width: 15%;
+            margin: 2% 0;
+            font-family: "Open Sans";
+            @include font(20px, 200, 30px, $color-green);
+            border: solid 1px $color-green;
+            padding: 10px;
+            background-color: transparent;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $color-green;
+                color: $color-white;
+            }
+        }
+    }
+
+    .slot_comment {
+        padding: 1% 15% 1% 15%;
+        margin: 1% 0;
+        background-color: $color-grey-light;
+
+        #user {
+            font-family: "Open Sans";
+            @include font(25px, 600, 30px, $color-black);
+        }
+
+        #date {
+            font-family: "Open Sans";
+            @include font(15px, 200, 30px, $color-black);
+        }
+
+        #content_comment {
+            font-family: "Open Sans";
+            @include font(18px, 200, 30px, $color-black);
+        }
+        #report{
+            font-size: 20px;
+            cursor: pointer;
+            float: right;
+        }
+    }
+}
