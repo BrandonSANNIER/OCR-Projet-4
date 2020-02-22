@@ -1,0 +1,258 @@
+/*------------------------HEADER--------------------------*/
+.header_admin{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 75px;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 2;
+    box-shadow: 0 0px 9px 4px rgba(0, 0, 0, 0.1), 0 -5px 2px 2px rgba(0, 0, 0, 0.1);
+    #logo_admin{
+        width: 45.5px;
+        padding: 11.5px 100px;
+        fill: #ffffff;
+        background-color: $color-black;
+    }
+    #menu{
+        color: #ffffff;
+        margin-left: -20px;
+        margin-right: 20px;
+        background-color: $color-black;
+    }
+    #notif{
+        color: #89949B;
+        background-color: #f6f6f6;
+        span{
+            position: absolute;
+            min-width: 20px;
+            min-height: 20px;
+            line-height: 20px;
+            font-weight: bold;
+            color: white;
+            border-radius: 100%;
+            font-size: 12px;
+            font-family: "Open Sans";
+            background: #E94B3B;
+            box-shadow: 0.5px 0.2px 1px rgba(0, 0, 0, 0.5);
+            display: inline-block;
+            text-align: center;
+            top: 10px;
+            z-index: 1;
+        }
+        &:hover{
+            color: #ffffff;
+        }
+    }
+    #menu, #notif, #setting{
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        width: 40px; 
+        height: 40px;
+    }
+    #profil{
+        width: 1%;
+        #azerty{
+            width: 100%;
+        }
+    }
+    #setting{
+        color: #89949B;
+        background-color: #f6f6f6;
+        position: absolute;
+        right: 50px;
+        &:hover{
+            color: #ffffff;
+        }
+    }
+    #profil{
+        color: #ffffff;
+        position: absolute;
+        right: 115px;
+    }
+}
+
+
+/*------------------------DASHBOARD--------------------------*/
+.sidebar{
+    z-index: 1;
+    padding-top: 75px;
+    position: fixed;
+    width: 50px;
+    height: 100vh;
+    background-color: #32323A;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 2px 4px 8px rgba(0, 0, 0, 0.28);
+    ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li{
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 15px 15px;
+            color: #ffffff;
+            &:nth-child(1){
+                background-color: #23AE89;
+            }
+            &:nth-child(2){
+                background-color: #E94B3B;
+            }
+            &:nth-child(3){
+                background-color: #1C7EBB;
+            }
+            &:nth-child(4){
+                background-color: #6A55C2;
+            }
+            &:hover{
+                width: 23px;
+            }
+        }
+    }
+}
+
+.main_admin{
+    position: absolute;
+    top: 105px;
+    left: 80px;
+    h1{
+        margin: 0;
+        font-family: "Open Sans";
+        @include font(18px, 700, 24px, $color-black);
+    }
+    p{
+        margin: 0;
+        font-family: "Open Sans";
+        @include font(13px, 600, 24px, $color-black);
+    }
+    .content_rs{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        #tweet, #fb, #insta, #in{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.04), 2px 4px 8px rgba(0, 0, 0, 0.08);
+            width: 430px;
+            height: 110px;
+            background-color: #fff;
+            margin-right: 14px;
+            margin-top: 25px;
+            border-radius: 5px;
+            font-size: 50px;
+            form{
+                /* display: none; */
+                margin-top: 26px;
+                margin-right: 5px;
+                input[type=text]{
+                    border-radius: 5px;
+                    border: solid 1px #b1b1b1;
+                    padding: 5px;
+                }
+                
+            }
+            p{
+                padding: 20px 20px 20px 0;
+                @include font(18px, 400, 35px, $color-black);
+                text-transform: uppercase;
+                float: right;
+                text-align: right;
+                color: #515D6E;
+                span{
+                    @include font(37px, 700, 0px, $color-black);
+                }
+                i{
+                    color: #b1b1b1;
+                    cursor: pointer;
+                    font-size: 15px;
+                    padding: 0;  
+                    &:hover{
+                        color: $color-black;
+                    }            
+                }
+            }
+            &:nth-child(1){
+                color: #48ACF8;
+            }
+            &:nth-child(2){
+                color: #3A5699;
+            }
+            &:nth-child(3){
+                color: #E94B3B;
+            }
+            &:nth-child(4){
+                color: #017AB7;
+            }
+            i{
+                padding: 30px;
+            }
+        }
+    }
+    .comment_report{
+        width: 875px;
+        height: 400px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.04), 2px 4px 8px rgba(0, 0, 0, 0.08);
+        h2{
+            margin-bottom: 0;
+            width: 855px;
+            background-color: #FAFAFA;
+            padding: 10px 10px;
+            font-family: "Open Sans";
+            @include font(15px, 600, 0px, #515D6E);
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            span{
+                border-radius: 50%;
+                background-color: #E94B3B;
+                min-width: 20px;
+                min-height: 20px;
+                line-height: 20px;
+                font-weight: bold;
+                color: white;
+                border-radius: 100%;
+                font-size: 12px;
+                font-family: "Open Sans";
+                background: #E94B3B;
+                box-shadow: 0.5px 0.2px 1px rgba(0, 0, 0, 0.5);
+                display: inline-block;
+                text-align: center;
+            }
+        }
+        .slot_report{
+            padding-top: 20px;
+            padding-bottom: 10px;
+            width: 100%;
+            height: auto;
+            border-bottom: solid 1px #F4F4F4;
+            #link_del{
+                float: right;
+                i{
+                    padding: 5px 10px;
+                }
+            }
+            #user_report{
+                padding: 5px 15px;
+                float: left;
+                font-size: 30px;
+            }
+            h3{
+                margin: 0;
+                font-family: "Open Sans";
+                @include font(20px, 400, 15px, $color-black);
+                span{
+                    @include font(10px, 400, 32px, $color-black);
+                }
+            }
+            p{
+                padding: 0 75px;
+            }
+        }
+    }
+}

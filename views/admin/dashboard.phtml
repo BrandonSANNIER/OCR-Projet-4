@@ -1,11 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dashboard</title>
+    <link rel="icon" href="/jean-forteroche/public/assets/img/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,500,600,700,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/jean-forteroche/public/assets/css/style.css">
 </head>
 <body>
-    teh
+    <div class="header_admin">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 491 567" id="logo_admin">
+            <path id="Forme_1" data-name="Forme 1" class="cls-1" d="M491,219l-64,76a10.647,10.647,0,0,0,1,13c-6.779,3.14-349,162-349,162l166,97L491,425V219Z"/>
+            <path id="Forme_2" data-name="Forme 2" class="cls-1" d="M62,461l11,6L284,257s31.476,20.6,53-5,8.806-49.466-2-58c-10.318-7.56-33.409-19.679-55,1-17.936,15.075-15.7,38.052-5,53C266.937,256.613,62,461,62,461Z"/>
+            <path id="Forme_3" data-name="Forme 3" class="cls-1" d="M59,459L0,425V141L245,0l69,40-75,64s-8.208,6.932-16,0C215.208,121.646,59,459,59,459Z"/>
+        </svg>
+        <div id="menu"><i class="fas fa-bars"></i></div>
+        <div id="notif"><i class="far fa-bell"><span class="badge_notif">15</span></i></div>
+        <div id="profil">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 491 567" id="azerty">
+            <path id="Forme_1" data-name="Forme 1" class="cls-1" d="M491,219l-64,76a10.647,10.647,0,0,0,1,13c-6.779,3.14-349,162-349,162l166,97L491,425V219Z"/>
+            <path id="Forme_2" data-name="Forme 2" class="cls-1" d="M62,461l11,6L284,257s31.476,20.6,53-5,8.806-49.466-2-58c-10.318-7.56-33.409-19.679-55,1-17.936,15.075-15.7,38.052-5,53C266.937,256.613,62,461,62,461Z"/>
+            <path id="Forme_3" data-name="Forme 3" class="cls-1" d="M59,459L0,425V141L245,0l69,40-75,64s-8.208,6.932-16,0C215.208,121.646,59,459,59,459Z"/>
+            </svg>
+        </div>
+        <div id="setting"><i class="fas fa-cog"></i></div>
+    </div>
+
+    <div class="sidebar">
+        <ul>
+            <li><i class="fas fa-tachometer-alt"></i></li>
+            <li><i class="fas fa-pen"></i></li>
+            <li><i class="fas fa-shopping-cart"></i></li>
+            <li><i class="fas fa-wrench"></i></li>
+        </ul>
+    </div>
+
+    <div class="main_admin">
+        <h1>Dashboard</h1>
+        <p>Bienvenue, Admin</p>
+
+        <div class="content_rs">
+            <div id="tweet">
+                <i class="fab fa-twitter"></i>
+                <form action="">
+                    <input type="text" name="" id="" placeholder="https://www.twitter.com/.../">
+                </form>
+                <p>Twitter <br><span id="number_rs"><i class="fas fa-pen"></i>&nbsp;1507</span>
+                </p>
+            </div>
+            <div id="fb">
+                <i class="fab fa-facebook-f"></i>
+                <form action="">
+                    <input type="text" name="" id="" placeholder="https://www.facebook.com/.../">
+                </form>
+                <p>Facebook <br><span id="number_rs"><i class="fas fa-pen"></i>&nbsp;2707</span></p>
+            </div>
+            <div id="insta">
+                <i class="fab fa-instagram-square"></i>
+                <form action="">
+                    <input type="text" name="" id="" placeholder="https://www.instagram.com/.../">
+                </form>
+                <p>Instagram <br><span id="number_rs"><i class="fas fa-pen"></i>&nbsp;1202</span></p>
+            </div>
+            <div id="in">
+                <i class="fab fa-linkedin"></i>
+                <form action="">
+                    <input type="text" name="" id="" placeholder="https://fr.linkedin.com/.../">
+                </form>
+                <p>Linkedin <br><span id="number_rs"><i class="fas fa-pen"></i></span></p>
+            </div>
+        </div>
+
+        <div class="comment_report">
+            <h2>Commentaires indésirables&nbsp;&nbsp;<span id="badge_comment">2</span></h2>
+            <div class="slot_report">
+                <i class="fas fa-link" id="link_del"><i class="far fa-trash-alt"></i></i>
+                <i class="fas fa-user-slash" id="user_report"></i>
+                <h3>User Name <br><span id="date_report">21/02/2020 à 22h50</span></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci, libero tortor sit netus. Cras mauris ut consectetur sodales venenatis. Id id scelerisque sit scelerisque hendrerit odio. Et sed sed libero ac. Varius eget nunc euismod vulputate non interdum ut id. Vitae lacus orci urna mi. Vitae pellentesque vulputate diam, iaculis massa. Scelerisque aliquam ac purus adipiscing. Commodo turpis mauris enim neque.</p>
+            </div>
+            <div class="slot_report">
+                <i class="fas fa-link" id="link_del"><i class="far fa-trash-alt"></i></i>
+                <i class="fas fa-user-slash" id="user_report"></i>
+                <h3>User Name <br><span id="date_report">21/02/2020 à 22h50</span></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci, libero tortor sit netus. Cras mauris ut consectetur sodales venenatis. Id id scelerisque sit scelerisque hendrerit odio. Et sed sed libero ac. Varius eget nunc euismod vulputate non interdum ut id. Vitae lacus orci urna mi. Vitae pellentesque vulputate diam, iaculis massa. Scelerisque aliquam ac purus adipiscing. Commodo turpis mauris enim neque.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a5f0c7cf2a.js" crossorigin="anonymous"></script>
 </body>
 </html>

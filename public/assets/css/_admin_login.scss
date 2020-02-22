@@ -1,4 +1,4 @@
-/*------------------------CONTENT_LOGIN--------------------------*/
+/*------------------------LOGIN SCREEN--------------------------*/
 #bg_login{
     background-image: url("/jean-forteroche/public/assets/img/admin/bg_login.jpg");
     background-position: left;
@@ -41,9 +41,8 @@
             margin-bottom: 3%;
         }
         #remember{
-            margin-top: 3%;
-            margin-left: 12%;
-            margin-bottom: 0;
+            cursor: pointer;
+            margin: 3% 10px 0 12%;
             border: solid 1px #c7c7c7;
             background-color: $color-white;
             color: $color-white;
