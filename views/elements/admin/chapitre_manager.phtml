@@ -1,0 +1,46 @@
+<div class="main_admin">
+    <h1>Chapitre&nbsp;&nbsp;<a href="/jean-forteroche/roman/addchapitre" id="btn_addchapitre">Ajouter</a></h1>
+    <table class="chapitre_manager">
+        <thead>
+            <td>#</td>
+            <td>titre</td>
+            <td>slug</td>
+            <td>description</td>
+            <td>contenu</td>
+            <td>img min</td>
+            <td>img full</td>
+            <td>date</td>
+            <td></td>
+        </thead>
+        <tbody>
+            <?php foreach($chapitres as $chapitre): ?>
+                <tr>
+                    <td><?= $chapitre['data']['id'] ?></td>
+                    <td><?= $chapitre['data']['title'] ?></td>
+                    <td><?= $chapitre['data']['slug'] ?></td>
+                    <td><?= $chapitre['data']['resum'] ?></td>
+                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie id non dignissim sagittis, lectus vulputate velit.</td>
+                    <td><?= $chapitre['data']['src'] ?></td>
+                    <td><?= $chapitre['data']['src_full'] ?></td>
+                    <td><?= $chapitre['data']['date'] ?></td>
+                    <td>
+                        <a href="/jean-forteroche/roman/editChapitre/<?= $chapitre['data']['id'] ?>"><i class="far fa-edit" id="edit" title="Editer le chapitre"></i></a>
+                        <a onclick="return confirm('Voulez vous vraiment supprimer le chapitre?');" href="/jean-forteroche/roman/delete/<?= $chapitre['data']['id'] ?>"><i class="far fa-trash-alt" id="delete" title="Supprimer le chapitre"></i></a>
+                    </td>
+                    
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+        <tfoot>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tfoot>
+    </table>
+</div>

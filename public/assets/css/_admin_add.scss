@@ -1,0 +1,94 @@
+/*------------------------ADD Roman/Chapitre--------------------------*/
+#form_roman{
+    width: 75%;
+    #title{
+        border-radius: 5px;
+        border: solid 1px #ccc;
+        padding: 15px;
+        margin-top: 25px;
+        margin-bottom: 20px;
+        width: 97.7%;
+        @include font(15px, 500, 15px, #000000);
+    }
+}
+
+#sidebar{
+    border-radius: 5px;
+    position: absolute;
+    right: 10px;
+    top: 45px;
+    background-color: #ffffff;
+    width: 370px;
+    height: auto;
+    border: solid 1px #ccc;
+    ul{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        font-family: "Open Sans";
+        #btn_submit{
+            background-color: #efefef;
+            height: 80px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            input{
+                @include font(15px, 500, 15px, #ffffff);
+                font-family: "Open Sans";
+                background-color: $color-black;
+                border: none;
+                border-radius: 3px;
+                padding: 14px;
+                float: right;
+                margin: 17px 25px;
+                cursor: pointer;
+            }
+        }
+        .btn_sidebar{
+            width: 89.3%;
+            border-top: solid 1px $color-black;
+            border-bottom: solid 1px $color-black;
+            text-align: left;
+            padding: 15px 20px;
+            border-top: solid 1px #e2e4e7;
+            border-bottom: none;
+            border-left: 0;
+            border-right: 0;
+            background-color: #ffffff;
+            color: #191e23;
+            font-family: "Open Sans";
+            @include font(15px, 600, 15px, #555d66);
+            cursor: pointer;
+            i{
+                float: right;
+            }
+            &:hover{
+                background-color: #f3f4f5;
+            }
+        }
+        .f_btn_sidebar{
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        .content_sidebar{
+            padding: 5px 0 5px 30px;
+            width: 100%;
+            margin: 10px 0;
+            p{
+                width: 300px;
+                color: #555d66;
+            }
+            label{
+                color: #555d66;
+            }
+            input{
+                margin: 15px 0;
+                border-radius: 3px;
+                border: solid 1px #ccc;
+                padding: 5px;
+            }
+        }
+        #desc, #slug, #src{
+            width: 70%;
+        }
+    }
+}

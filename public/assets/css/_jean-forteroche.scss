@@ -32,7 +32,7 @@ body {
 }
 
 .transition-fade {
-  transition: 1s;
+  transition: .3s;
   opacity: 1;
 }
 
@@ -323,7 +323,9 @@ footer {
             @include font(14px, 300, 30px, $color-black);
             font-family: "Open Sans";
             list-style: none;
-
+            a{
+                color: $color-black;
+            }
             span {
                 @include font(14px, 600, 30px, $color-black);
             }

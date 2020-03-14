@@ -1,0 +1,38 @@
+<div class="main_admin">
+    <h1>Ajouter un nouveau roman</h1>
+    <form method="POST" 
+    >
+        <div id="form_roman">
+            <input type="text" name="title" placeholder="Saisissez votre titre ici" id="title" required>
+        </div>
+        <div id="sidebar">
+            <ul>
+                <li><div class="btn_sidebar f_btn_sidebar" href="#">Image mise en avant<i class="fas fa-chevron-down"></i></div>
+                    <ul>
+                        <li class="content_sidebar">
+                            <label for="src">Définir l'image mise en avant</label><br>
+                            <input type="text" name="src" id="src" required>
+                            <p><em>Image du répertoire '/ jean-forteroche / public / assets /img /'.</em></p>
+                        </li>
+                    </ul>
+                </li>
+                <li><div class="btn_sidebar" href="#">Decription<i class="fas fa-chevron-down"></i></div>
+                    <ul>
+                        <li class="content_sidebar">
+                            <label for="desc">Rédiger une extrait</label><br>
+                            <input type="text" name="resum" id="desc" required>
+                        </li>
+                    </ul>
+                </li>
+                <li id="btn_submit">
+                    <input type="submit" name="submit_roman" value="Publier">
+                </li>
+            </ul>
+        </div>
+
+    </form>
+</div>
+
+
+
+

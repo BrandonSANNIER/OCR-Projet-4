@@ -22,25 +22,14 @@ abstract class Model{
         // Supprime la connexion précédente
         $this->_connexion = null;
 
-        // Connecter à la bdd
+        // Connexion à la bdd
         try{
             $this->_connexion = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->db_name, $this->username, $this->password);
             $this->_connexion->exec("set names utf8");
+            $this->_connexion->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
         }catch(PDOException $exception){
             echo "Erreur de connexion : " . $exception->getMessage();
         }
-    }
-
-    /**
-     * Méthode permettant d'obtenir un enregistrement de la table choisie en fonction d'un id
-     *
-     * @return void
-     */
-    public function getOne($id){
-        $sql = "SELECT * AS 'date_formater' FROM ".$this->table." WHERE id=".$this->id;
-        $query = $this->_connexion->prepare($sql);
-        $query->execute();
-        return $query->fetch();    
     }
 
     /**

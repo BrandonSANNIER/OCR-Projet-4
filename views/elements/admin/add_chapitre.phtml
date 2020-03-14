@@ -1,0 +1,51 @@
+<div class="main_admin">
+    <h1>Ajouter un nouveau chapitre</h1>
+    <form method="POST" action="/jean-forteroche/roman/addchapitre">
+        <div id="form_roman">
+            <input type="text" name="title" placeholder="Saisissez votre titre ici" id="title">
+            <textarea name="content" cols="30" rows="40"></textarea>
+        </div>
+        <div id="sidebar">
+            <ul>
+                <li>
+                    <div class="btn_sidebar f_btn_sidebar" href="#">Permalien<i class="fas fa-chevron-down"></i></div>
+                    <ul>
+                        <li class="content_sidebar">
+                            <label for="slug">Slug d’URL</label><br>
+                            <input type="text" name="slug" id="slug">
+                            <p title="Le slug est un court texte utilisable dans une URL et facilement compréhensible à la fois par les utilisateurs et les moteurs de recherche pour décrire et identifier une ressource. Noter que pour pouvoir figurer dans une URL, un slug ne doit pas comporter de caractères spéciaux (espaces, caractères diacritiques, etc.)."><em>Le slug est un court texte utilisable dans une URL et facilement compréhensible à la fois par le...</em></p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="btn_sidebar" href="#">Image mise en avant<i class="fas fa-chevron-down"></i></div>
+                    <ul>
+                        <li class="content_sidebar">
+                            <label for="src">Définir l'image mise en avant</label><br>
+                            <input type="text" name="src" id="src">
+                            <p><em>Image du répertoire '/ jean-forteroche / public / assets / img /'. 495x742</em></p>
+                        </li>
+                        <li class="content_sidebar">
+                            <label for="src">Définir l'image mise en avant</label><br>
+                            <input type="text" name="src_full" id="src">
+                            <p><em>Image du répertoire '/ jean-forteroche / public / assets / img /'. 1200x675</em></p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="btn_sidebar" href="#">Decription<i class="fas fa-chevron-down"></i></div>
+                    <ul>
+                        <li class="content_sidebar">
+                            <label for="resum">Rédiger une extrait</label><br>
+                            <input type="text" name="resum" id="desc">
+                        </li>
+                    </ul>
+                </li>
+                <li id="btn_submit">
+                    <input type="submit" name="submit_chapitre" value="Publier">
+                </li>
+            </ul>
+        </div>
+
+    </form>
+</div>

@@ -8,10 +8,10 @@ class Chapitres extends Controller{
      */
     public function index(){
         // Instancie le modèle "Chapitre"
-        $this->loadModel("Chapitre");
+        $this->loadModel("ChapitreManager");
 
         // Stocke la liste des chapitre dans $chapitress
-        $chapitres = $this->Chapitre->getAll();
+        $chapitres = $this->ChapitreManager->getAll();
 
         // Envoie les données à la vue index
         $this->render('chapitre', compact('chapitres'));
@@ -26,13 +26,13 @@ class Chapitres extends Controller{
      */
     public function lecture(string $slug){
         // Instancie le modèle "Chapitre" et "Comment"
-        $this->loadModel('Chapitre');
-        $this->loadModel('Comment');
+        $this->loadModel('ChapitreManager');
+        $this->loadModel('CommentManager');
 
         // Stocke les commentaires dans $comments et
         // le slug dans $chapitre
-        $chapitre = $this->Chapitre->findBySlug($slug);
-        $comments = $this->Comment->getComments($chapitre['id']);
+        $chapitre = $this->ChapitreManager->findBySlug($slug);
+        $comments = $this->CommentManager->getComments($chapitre['id']);
 
         // Inctencie la fonction pour ajouter un commentaire
         $this->addComment();
@@ -47,13 +47,13 @@ class Chapitres extends Controller{
      */
     public function addComment(){
         // Instancie le modèle "Chapitre" et "Comment"
-        $this->loadModel('Chapitre');
-        $this->loadModel('Comment');
+        $this->loadModel('ChapitreManager');
+        $this->loadModel('CommentManager');
 
         // Si le formulaire et remplie
         if(!empty($_POST['submit_comment']) AND !empty($_POST['first_name']) AND !empty($_POST['last_name']) AND !empty($_POST['comment']) AND !empty($_POST['id_chapt'])) {
-            $this->Comment->addComment($_POST);
-            $chapitre = $this->Chapitre->findById($_POST['id_chapt']);
+            $this->CommentManager->addComment($_POST);
+            $chapitre = $this->ChapitreManager->findById($_POST['id_chapt']);
             header('Location: lecture/'.$chapitre['slug'].'');
         }  
     }

@@ -49,14 +49,12 @@ abstract class Controller{
         ob_start();
 
         // Génèration de la vue
-        require_once(ROOT.'views/'.strtolower(get_class($this)).'/'.$fichier.'.php');
+        require_once(ROOT.'views/elements/admin/'.$fichier.'.phtml');
 
         // Stocke le contenu dans $content
         $content = ob_get_clean();
 
         // Affichage du layout
-        require_once(ROOT.'views/layout/admin.php');
+        require_once(ROOT.'views/layout/admin.phtml');
     }
-
-
 }

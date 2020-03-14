@@ -8,10 +8,10 @@ class Home extends Controller{
      */
     public function index(){
         // Instancie le modèle "Roman"
-        $this->loadModel("Roman");
+        $this->loadModel("RomanManager");
 
         // Stocke la liste des romans dans $romans
-        $romans = $this->Roman->getAll();
+        $romans = $this->RomanManager->getAll();
         
         // Envoie les données à la vue index
         $this->render('home', compact('romans'));

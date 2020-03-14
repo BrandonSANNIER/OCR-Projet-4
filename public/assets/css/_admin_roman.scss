@@ -1,0 +1,76 @@
+/*------------------------ROMAN MANAGER--------------------------*/
+#btn_addroman{
+    text-decoration: none;
+    @include font(15px, 600, 64px, $color-black);
+    padding: 10px;
+    border: solid 1px $color-black;
+}
+
+.roman_manager{
+    border-collapse: collapse;
+    margin-bottom: 100px;
+    width: 100%;
+    margin-right: 25px;
+    margin-top: 25px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.04), 2px 4px 8px rgba(0, 0, 0, 0.08);
+    thead{
+        background-color: #FAFAFA;
+        td{
+            font-family: "Open Sans";
+            @include font(14px, 600, 0px, #515D6E);
+            padding: 25px;
+            text-transform: uppercase;
+            &:first-child{
+                border-top-left-radius: 5px;
+            }
+            &:last-child{
+                border-top-right-radius: 5px;
+            }
+        }
+    }
+    tbody{
+        background-color: #ffffff;
+        td{
+            border-bottom: solid 1px #F4F4F4;
+            font-family: "Open Sans";
+            @include font(14px, 300, 32px, #515D6E);
+            padding: 25px;
+            a{
+                color: #515D6E;
+            }
+            i{
+                cursor: pointer;
+            }
+            #edit{
+                &:hover{
+                    color: #4CAF50;
+                }
+            }
+            #delete{
+                &:hover{
+                    color: #F44336;
+                }
+            }
+            button{
+                border: none;
+                background: none;
+            }
+        }
+    }
+    tfoot{
+        background-color: #FAFAFA;
+        td{
+            padding: 15px;
+            @include font(14px, 300, 32px, #515D6E);
+            i{
+                cursor: pointer;
+            }
+            &:first-child{
+                border-bottom-left-radius: 5px;
+            }
+            &:last-child{
+                border-bottom-right-radius: 5px;
+            }
+        }
+    }
+}

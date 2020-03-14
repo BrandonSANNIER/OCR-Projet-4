@@ -1,4 +1,4 @@
-<div class="bg_chapitre rellax" data-rellax-speed="1" style="background-image: url('<?= $chapitre['src_full'] ?>')">
+<div class="bg_chapitre rellax" data-rellax-speed="1" style="background-image: url('/jean-forteroche/public/assets/img/<?= $chapitre['src_full'] ?>')">
     <h1>Chapitre <?= $chapitre['id']?></h1>
     <h2>“Billet simple pour l'Alaska”</h2>
     <p id="date"><?= $chapitre['date_formater']?></p>
@@ -18,7 +18,7 @@
 </div>
 
 <div class="comment">
-    <h3><span id="nbComment"></span>&nbsp;Commentaires</h3>
+    <h3><span id="nbComment"><?= count($comments);?></span>&nbsp;Commentaires</h3>
     <button id="btn_add_comment">Ajouter un commentaire</button>
     <form method="POST" action="../addComment" class="add_comment">
         <input type="hidden" name="id_chapt" value="<?= $chapitre['id']; ?>">

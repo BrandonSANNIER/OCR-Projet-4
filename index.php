@@ -3,6 +3,7 @@
 define('ROOT', str_replace('index.php','',$_SERVER['SCRIPT_FILENAME']));
 
 // Modèle et le contrôleur principaux
+require_once(ROOT.'app/Auth.php');
 require_once(ROOT.'app/Model.php');
 require_once(ROOT.'app/Controller.php');
 
@@ -31,7 +32,7 @@ if($params[0] != ""){
     }else{
         // Envoie du code réponse 404
         http_response_code(404);
-        require_once(ROOT.'views/errors/404.php');
+        require_once(ROOT.'views/errors/404.phtml');
     }
 }else{
     // Si aucun paramètre n'est défini

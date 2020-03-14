@@ -1,19 +1,10 @@
-const swup = new Swup({
-  plugins: [new SwupOverlayTheme()]
-});
+rellax = new Rellax('.rellax');
+btnComment = $("#btn_add_comment");
 
-swup.on('contentReplaced', () => {
-  rellax = new Rellax('.rellax');
-  btnComment = $("#btn_add_comment");
-  nbComment = $('.slot_comment').length;
-
-  btnComment.on('click', () =>{
-    console.log("show comment")
-    $(".add_comment").show(500);
-    $("#btn_add_comment").hide();
-  });
-
-  $('#nbComment').text(nbComment);
+btnComment.on('click', () =>{
+  console.log("show comment");
+  $(".add_comment").show(500);
+  $("#btn_add_comment").hide();
 });
 
 

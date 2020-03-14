@@ -1,0 +1,142 @@
+/*------------------------DASHBOARD--------------------------*/
+
+
+.main_admin{
+    position: absolute;
+    top: 105px;
+    left: 80px;
+    right: 30px;
+    h1{
+        margin: 0;
+        font-family: "Open Sans";
+        @include font(30px, 700, 24px, $color-black);
+    }
+    p{
+        margin: 0;
+        font-family: "Open Sans";
+        @include font(13px, 500, 24px, $color-black);
+    }
+    .content_rs{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        #tweet, #fb, #insta, #in{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.04), 2px 4px 8px rgba(0, 0, 0, 0.08);
+            width: 422px;
+            height: 110px;
+            background-color: #fff;
+            margin-right: 14px;
+            margin-top: 25px;
+            border-radius: 5px;
+            font-size: 50px;
+            p{
+                padding: 20px 20px 20px 0;
+                @include font(18px, 400, 35px, $color-black);
+                text-transform: uppercase;
+                float: right;
+                text-align: right;
+                color: #515D6E;
+                span{
+                    @include font(37px, 700, 0px, $color-black);
+                }
+            }
+            &:nth-child(1){
+                color: #48ACF8;
+            }
+            &:nth-child(2){
+                color: #3A5699;
+            }
+            &:nth-child(3){
+                color: #E94B3B;
+            }
+            &:nth-child(4){
+                color: #017AB7;
+            }
+            i{
+                padding: 30px;
+            }
+        }
+    }
+    .comment_report{
+        overflow: hidden;
+        margin-top: 30px;
+        width: 860px;
+        height: 400px;
+        background-color: #fff;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.04), 2px 4px 8px rgba(0, 0, 0, 0.08);
+        #see_more{
+            position: absolute;
+            top: 100%;
+            background-color: #FAFAFA;
+            width: 850px;
+            text-align: center;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            padding: 5px;
+            cursor: pointer;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.04), 2px 4px 8px rgba(0, 0, 0, 0.08);
+        }
+        h2{
+            margin: 0;
+            width: 840px;
+            background-color: #FAFAFA;
+            padding: 15px 10px;
+            font-family: "Open Sans";
+            @include font(15px, 600, 0px, #515D6E);
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            span{
+                border-radius: 50%;
+                background-color: #E94B3B;
+                min-width: 20px;
+                min-height: 20px;
+                line-height: 20px;
+                font-weight: bold;
+                color: white;
+                border-radius: 100%;
+                font-size: 12px;
+                font-family: "Open Sans";
+                background: #E94B3B;
+                box-shadow: 0.5px 0.2px 1px rgba(0, 0, 0, 0.5);
+                display: inline-block;
+                text-align: center;
+            }
+        }
+        .slot_report{
+            padding-top: 20px;
+            padding-bottom: 10px;
+            width: 100%;
+            height: auto;
+            border-bottom: solid 1px #F4F4F4;
+            #link_del{
+                float: right;
+                cursor: pointer;
+                i{
+                    padding: 5px 10px;
+                }
+            }
+            #user_report{
+                padding: 5px 15px;
+                float: left;
+                font-size: 30px;
+            }
+            h3{
+                margin: 0;
+                font-family: "Open Sans";
+                @include font(20px, 400, 15px, $color-black);
+                span{
+                    @include font(10px, 400, 32px, $color-black);
+                }
+            }
+            p{
+                padding: 0 75px;
+            }
+        }
+    }
+}

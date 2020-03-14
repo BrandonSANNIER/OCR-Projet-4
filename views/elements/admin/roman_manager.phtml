@@ -1,0 +1,36 @@
+<div class="main_admin">
+    <h1>Roman&nbsp;&nbsp;<a href="roman/addroman" id="btn_addroman">Ajouter</a></h1>
+    <table class="roman_manager">
+        <thead>
+            <td>#</td>
+            <td>titre</td>
+            <td>description</td>
+            <td>image</td>
+            <td>date</td>
+            <td></td>
+        </thead>
+        <tbody>
+            <?php foreach($romans as $roman): ?>
+                <tr>
+                    <td><?= $roman['id'] ?></td>
+                    <td><a href="/jean-forteroche/roman/chapitre/<?= $roman['id'] ?>"><?= $roman['title'] ?></a></td>
+                    <td><?= $roman['resum'] ?></td>
+                    <td><?= $roman['src'] ?></td>
+                    <td><?= $roman['date'] ?></td>
+                    <td>
+                        <a href="/jean-forteroche/roman/editRoman/<?= $roman['id'] ?>"><i class="far fa-edit" id="edit" title="Editer le chapitre"></i></a>
+                        <a onclick="return confirm('Voulez vous vraiment supprimer le roman?');" href="/jean-forteroche/roman/deleteRoman/<?= $roman['id'] ?>"><i class="far fa-trash-alt" id="delete" title="Supprimer le chapitre"></i></a>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+        <tfoot>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tfoot>
+    </table> 
+</div>
