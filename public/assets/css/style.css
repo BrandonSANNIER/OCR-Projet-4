@@ -61,33 +61,44 @@ header img {
 }
 
 .content_header {
-  margin: 23% 10% 33vh 15%;
+  padding: 22% 10% 33vh 15%;
 }
 
 .content_header .bg1 {
+  background-image: url("../img/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   position: absolute;
   left: 0;
-  min-height: 100vh;
   top: 0;
+  min-height: 100vh;
   z-index: -1;
   width: 100%;
-  border-bottom: solid 185px #EEEEEE;
 }
 
 .content_header .bg2 {
+  background-image: url("../img/bg_2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   position: absolute;
   left: 0;
-  min-height: 100vh;
   top: 0;
+  min-height: 100vh;
   z-index: -2;
   width: 100%;
 }
 
 .content_header .bg3 {
+  background-image: url("../img/bg_3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   position: absolute;
   left: 0;
-  min-height: 100vh;
   top: 0;
+  min-height: 100vh;
   z-index: -3;
   width: 100%;
 }
@@ -111,6 +122,7 @@ header img {
 }
 
 .rs {
+  margin-bottom: 20px;
   margin-left: 10%;
   cursor: pointer;
   font-size: 20px;
@@ -119,7 +131,8 @@ header img {
 
 /*----------------------------LISTE DES ROMANS-----------------------------*/
 .list_roman {
-  margin-top: 10%;
+  background-color: #EEEEEE;
+  padding-top: 10%;
 }
 
 .list_roman #list {
@@ -187,7 +200,7 @@ header img {
   color: #212121;
   position: absolute;
   font-family: "Open Sans";
-  top: 139%;
+  top: 140%;
   left: 26.4%;
   width: 30%;
 }
@@ -279,7 +292,7 @@ header img {
 
 /*----------------------------BOUTIQUE-----------------------------*/
 .shop {
-  margin-top: 20%;
+  margin-top: 16%;
   width: 100%;
   background-color: #E8E8E8;
 }
