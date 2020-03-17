@@ -132,17 +132,16 @@ header img {
 /*----------------------------LISTE DES ROMANS-----------------------------*/
 .list_roman {
   background-color: #EEEEEE;
-  padding: 10% 0;
+  padding-top: 10%;
 }
 
-.list_roman .list {
+.list_roman #list {
   display: none;
   margin-left: 15%;
   width: 65%;
-  position: relative;
 }
 
-.list_roman .list h1 {
+.list_roman #list h1 {
   font-size: 144px;
   font-weight: 400;
   line-height: 24px;
@@ -151,7 +150,7 @@ header img {
   display: inline-block;
 }
 
-.list_roman .list h2 {
+.list_roman #list h2 {
   margin-left: 30px;
   font-size: 64px;
   font-weight: 400;
@@ -160,10 +159,10 @@ header img {
   display: inline-block;
   vertical-align: top;
   text-transform: uppercase;
-  width: 520px;
+  width: 55%;
 }
 
-.list_roman .list i {
+.list_roman #list i {
   margin-left: 5.5%;
   cursor: pointer;
   display: -webkit-box;
@@ -187,26 +186,26 @@ header img {
   width: 50px;
 }
 
-.list_roman .list .fa-angle-up {
+.list_roman #list .fa-angle-up {
   border: solid 1px #212121;
   color: #212121;
   margin-top: 2%;
   margin-bottom: 3%;
 }
 
-.list_roman .list p {
+.list_roman #list p {
   font-size: 20px;
   font-weight: 200;
   line-height: 30px;
   color: #212121;
   position: absolute;
   font-family: "Open Sans";
-  top: 58%;
-  left: 210px;
-  width: 510px;
+  top: 140%;
+  left: 26.4%;
+  width: 30%;
 }
 
-.list_roman .list a {
+.list_roman #list a {
   text-decoration: none;
   font-size: 15px;
   font-weight: 400;
@@ -224,7 +223,7 @@ header img {
   cursor: pointer;
 }
 
-.list_roman .list a i {
+.list_roman #list a i {
   border: 0;
   width: 50px;
   height: 30px;
@@ -232,16 +231,16 @@ header img {
   color: #AFAFAF;
 }
 
-.list_roman .list a:hover {
+.list_roman #list a:hover {
   color: #212121;
   border: solid 1px #212121;
 }
 
-.list_roman .list a:hover i {
+.list_roman #list a:hover i {
   color: #212121;
 }
 
-.list_roman .list:nth-child(1) {
+.list_roman #list:nth-child(1) {
   display: block;
 }
 
@@ -293,7 +292,7 @@ header img {
 
 /*----------------------------BOUTIQUE-----------------------------*/
 .shop {
-  margin-top: 7%;
+  margin-top: 16%;
   width: 100%;
   background-color: #E8E8E8;
 }
@@ -309,15 +308,9 @@ header img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   margin: 0;
-  padding: 5% 10% 5% 10%;
+  padding: 5% 15% 5% 15%;
   list-style: none;
-}
-
-.shop ul li {
-  padding: 10px;
 }
 
 .shop ul li p {
@@ -402,195 +395,149 @@ footer ul li span {
 
 /*-------------------------RESPONSIVE------------------*/
 /*------------------------RESPONSIVE LAPTOP L--------------------------*/
-@media all and (max-width: 1510px) {
-  .list_roman #content_list {
-    top: 105%;
-    width: 280px;
-    height: 65%;
+@media all and (max-width: 1440px) {
+  .list_roman {
+    margin-top: 15%;
   }
-  .list_roman #content_list ul {
-    right: 46%;
-    width: 280px;
-    height: 280px;
+  .list_roman #list {
+    margin-left: 10%;
   }
-  .list_roman #content_list #selct_start {
-    top: 13.3%;
+  .list_roman #list h2 {
+    width: 70%;
   }
-  .list_roman #content_list #selct_end {
-    top: 85%;
+  .list_roman #list p {
+    left: 24.6%;
+    width: 34%;
+  }
+  .shop {
+    margin-top: 25%;
   }
 }
 
 /*-------------------------RESPONSIVE LAPTOP-------------------------*/
-@media all and (max-width: 1300px) {
+@media all and (max-width: 1024px) {
   header img {
-    width: 20%;
-  }
-  .list_roman {
-    padding: 15% 0 30% 0;
-  }
-  .list_roman .list {
-    width: 73%;
-  }
-  .list_roman #content_list {
-    top: 140%;
-  }
-  .shop {
-    margin-top: 35%;
-  }
-  .shop ul {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .shop ul li {
-    padding: 5% 30%;
-  }
-  .shop ul li img {
-    width: 100%;
-  }
-  footer img {
-    margin-top: 3.3%;
     width: 25%;
   }
-  footer ul {
-    padding-left: 55px;
+  .content_header {
+    margin-top: 35%;
+  }
+  .list_roman #list {
+    width: 70%;
+  }
+  .list_roman #list p {
+    width: 49%;
+    top: 135%;
+    left: 30.6%;
+  }
+  .list_roman #content_list {
+    top: 160%;
+    width: 280px;
+    height: 630px;
+  }
+  .list_roman #content_list ul {
+    right: 40%;
+    width: 300px;
+    height: 300px;
+  }
+  .list_roman #content_list ul li {
+    width: 300px;
+    height: 300px;
+  }
+  .list_roman #content_list #selct_start,
+  .list_roman #content_list #selct_end {
+    right: 145px;
+  }
+  .list_roman #content_list #selct_start {
+    top: 6.1%;
+  }
+  .shop {
+    margin-top: 75%;
+  }
+  .shop ul li {
+    padding-right: 0;
+    padding-bottom: 40px;
+  }
+  .shop ul li img {
+    width: 90%;
   }
 }
 
 /*-------------------------RESPONSIVE TABLETTE------------------*/
-@media all and (max-width: 995px) {
+@media all and (max-width: 768px) {
+  header {
+    margin-top: 5%;
+  }
   header img {
-    width: 25%;
+    width: 30%;
+  }
+  .content_header {
+    margin-top: 45%;
+    margin-bottom: 40%;
   }
   .list_roman {
-    padding: 15% 0 55% 0;
+    margin-top: 15%;
   }
-  .list_roman .list {
-    width: 90%;
-    margin-left: 10%;
+  .list_roman #list {
+    width: 80%;
   }
-  .list_roman .list h1 {
-    font-size: 135px;
+  .list_roman #list h1 {
+    font-size: 130px;
   }
-  .list_roman .list h2 {
-    margin-left: 20px;
-    font-size: 55px;
+  .list_roman #list h2 {
+    width: 65%;
+    font-size: 50px;
   }
-  .list_roman .list p {
-    font-size: 18px;
-    top: 58%;
-    left: 186px;
-    width: 460px;
+  .list_roman #list p {
+    top: 127%;
+    left: 34.9%;
   }
-  .list_roman #content_list {
-    top: 135%;
+  .list_roman #list .fa-angle-up {
+    margin-top: 4%;
   }
-  .list_roman #content_list #selct_start {
-    display: none;
-  }
-  .list_roman #content_list #selct_end {
-    display: none;
-  }
-  .shop ul li {
-    padding: 5% 24%;
-  }
-  footer img {
-    margin-top: 5.3%;
-    width: 33%;
-  }
-  footer ul {
-    padding-left: 45px;
-  }
-}
-
-@media all and (max-width: 785px) {
-  .list_roman .list h2 {
-    width: 450px;
+  .shop {
+    margin-top: 105%;
   }
 }
 
 /*-------------------------RESPONSIVE MOBILE------------------*/
-@media all and (max-width: 705px) {
+@media all and (max-width: 425px) {
+  body {
+    margin: 0 5% 0 5%;
+  }
+  header {
+    margin-top: 7%;
+  }
   header img {
-    width: 50%;
+    width: 55%;
   }
-  .content_header h1 {
-    font-size: 55px;
+  .content_header {
+    margin: 85% 0 35vh 0;
   }
-  .list_roman {
-    padding: 15% 0 120% 0;
-  }
-  .list_roman .list {
-    width: 90%;
-    margin-left: 5%;
-  }
-  .list_roman .list h1 {
-    font-size: 95px;
-  }
-  .list_roman .list h2 {
-    font-weight: 500;
-    width: 235px;
-    margin-left: 10px;
+  #rs {
     font-size: 30px;
-    line-height: 50px;
   }
-  .list_roman .list p {
-    top: 45%;
-    font-size: 13px;
-    left: 130px;
-    width: 240px;
+  .list_roman #list {
+    margin-left: 0;
+    width: 100%;
   }
-  .list_roman .list p a {
-    font-size: 12px;
-    width: 70%;
+  .list_roman #list h1 {
+    font-size: 105px;
   }
-  .list_roman .list p a i {
-    width: 46px;
-    height: 30px;
-    font-size: 22px;
+  .list_roman #list h2 {
+    margin-left: 0;
+    width: 66%;
+    font-size: 30px;
+    font-weight: 500;
   }
-  .list_roman .list .fa-angle-up {
-    margin-bottom: 10%;
+  .list_roman #list p {
+    top: 120%;
   }
-  .list_roman #content_list {
-    top: 115%;
-    width: 230px;
-    height: 50%;
-  }
-  .list_roman #content_list ul {
-    right: 45%;
-    width: 235px;
-    height: 235px;
-  }
-  .list_roman #content_list #selct_start {
-    top: 13.3%;
-  }
-  .list_roman #content_list #selct_end {
-    top: 85%;
+  .list_roman #list .fa-angle-up {
+    margin-top: 15%;
   }
   .shop {
-    margin-top: 0;
-  }
-  .shop ul li {
-    padding: 5% 20%;
-  }
-  footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: auto;
-  }
-  footer img {
-    display: none;
-  }
-  footer ul {
-    padding-left: 30%;
+    margin-top: 230%;
   }
 }
 

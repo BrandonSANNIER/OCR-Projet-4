@@ -1,214 +1,195 @@
 /*------------------------RESPONSIVE LAPTOP L--------------------------*/
 
-@media all and (max-width:1510px) {
-    .list_roman{
-        #content_list{
-            top: 105%;
-            width: 280px;
-            height: 65%;
-            ul{
-                right: 46%;
-                width: 280px;
-                height: 280px;
+@media all and (max-width:1440px) {
+    .content_header {}
+
+    .list_roman {
+        margin-top: 15%;
+
+        #list {
+            margin-left: 10%;
+
+            h2 {
+
+                width: 70%;
             }
-            #selct_start{
-                top: 13.3%;
-            }
-            #selct_end{
-                top: 85%;
+
+            p {
+                left: 24.6%;
+                width: 34%;
             }
         }
     }
-    
 
+    .shop {
+        margin-top: 25%;
+    }
 }
 
 /*-------------------------RESPONSIVE LAPTOP-------------------------*/
 
-@media all and (max-width:1300px) {
-    header{
-        img{
-            width: 20%;
+@media all and (max-width:1024px) {
+    header {
+        img {
+            width: 25%;
         }
     }
-    .list_roman{
-        padding: 15% 0 30% 0;
-        .list{
-            width: 73%;
-        }
-        #content_list{
-            top: 140%;
-        }
-    }
-    .shop{
+
+    .content_header {
         margin-top: 35%;
-        ul{
-            flex-direction: column;
-            li {
-                padding: 5% 30%;
-                img{
-                    width: 100%;
+    }
+
+    .list_roman {
+        #list {
+            width: 70%;
+
+            p {
+                width: 49%;
+                top: 135%;
+                left: 30.6%;
+            }
+        }
+
+        #content_list {
+            top: 160%;
+            width: 280px;
+            height: 630px;
+
+            ul {
+                right: 40%;
+                width: 300px;
+                height: 300px;
+
+                li {
+                    width: 300px;
+                    height: 300px;
                 }
+            }
+
+            #selct_start,
+            #selct_end {
+                right: 145px;
+            }
+
+            #selct_start {
+                top: 6.1%;
             }
         }
     }
-    footer{
-        img{
-            margin-top: 3.3%;
-            width: 25%;
-        }
-        ul{
-            padding-left: 55px;
+
+    .shop {
+        margin-top: 75%;
+
+        ul {
+            li {
+                padding-right: 0;
+                padding-bottom: 40px;
+
+                img {
+                    width: 90%;
+                }
+            }
         }
     }
 }
 
 /*-------------------------RESPONSIVE TABLETTE------------------*/
 
-@media all and (max-width: 995px) {
-    header{
-        img{
-            width: 25%;
-        }
-    }
-    .list_roman{
-        padding: 15% 0 55% 0;
-        .list{
-            width: 90%;
-            margin-left: 10%;
-            h1{
-                font-size: 135px;
-            }
-            h2{
-                margin-left: 20px;
-                font-size: 55px;
-            }
-            p{
-                font-size: 18px;
-                top: 58%;
-                left: 186px;
-                width: 460px;
-            }
-        }
-        #content_list{
-            top: 135%;
-            #selct_start{
-                display: none;
-            }
-            #selct_end{
-                display: none;
-            }
-        }
-    }
-    .shop{
-        ul{
-            li {
-                padding: 5% 24%;
-            }
-        }
-    }
-    footer{
-        img{
-            margin-top: 5.3%;
-            width: 33%;
-        }
-        ul{
-            padding-left: 45px;
-        }
-    }
-}
+@media all and (max-width: 768px) {
+    header {
+        margin-top: 5%;
 
-@media all and (max-width: 785px) {
-    .list_roman{
-        .list{
-            h2{
-                width: 450px;
+        img {
+            width: 30%;
+        }
+    }
+
+    .content_header {
+        margin-top: 45%;
+        margin-bottom: 40%;
+    }
+
+    .list_roman {
+        margin-top: 15%;
+
+        #list {
+            width: 80%;
+
+            h1 {
+                font-size: 130px;
+            }
+
+            h2 {
+                width: 65%;
+                font-size: 50px;
+            }
+
+            p {
+                top: 127%;
+                left: 34.9%;
+            }
+
+            .fa-angle-up {
+                margin-top: 4%;
             }
         }
+    }
+
+    .shop {
+        margin-top: 105%;
     }
 }
 
 /*-------------------------RESPONSIVE MOBILE------------------*/
 
-@media all and (max-width: 705px) {
-    header{
-        img{
-            width: 50%;
+@media all and (max-width: 425px) {
+    body {
+        margin: 0 5% 0 5%;
+    }
+
+    header {
+        margin-top: 7%;
+
+        img {
+            width: 55%;
         }
     }
-    .content_header{
-        h1{
-            font-size: 55px;
-        }
+
+    .content_header {
+        margin: 85% 0 35vh 0;
     }
-    .list_roman{
-        padding: 15% 0 120% 0;
-        .list{
-            width: 90%;
-            margin-left: 5%;
-            h1{
-                font-size: 95px;
+
+    #rs {
+        font-size: 30px;
+    }
+
+    .list_roman {
+        #list {
+            margin-left: 0;
+            width: 100%;
+
+            h1 {
+                font-size: 105px;
             }
-            h2{
-                font-weight: 500;
-                width: 235px;
-                margin-left: 10px;
+
+            h2 {
+                margin-left: 0;
+                width: 66%;
                 font-size: 30px;
-                line-height: 50px;
+                font-weight: 500;
             }
-            p{
-                top: 45%;
-                font-size: 13px;
-                left: 130px;
-                width: 240px;
-                a{
-                    font-size: 12px;
-                    width: 70%;
-                    i{
-                        width: 46px;
-                        height: 30px;
-                        font-size: 22px;
-                    }
-                }
+
+            p {
+                top: 120%;
             }
-            .fa-angle-up{
-                margin-bottom: 10%;
-            }
-        }
-        #content_list{
-            top: 115%;
-            width: 230px;
-            height: 50%;
-            ul{
-                right: 45%;
-                width: 235px;
-                height: 235px;
-            }
-            #selct_start{
-                top: 13.3%;
-            }
-            #selct_end{
-                top: 85%;
+
+            .fa-angle-up {
+                margin-top: 15%;
             }
         }
     }
-    .shop{
-        margin-top: 0;
-        ul{
-            li {
-                padding: 5% 20%;
-            }
-        }
-    }
-    footer{
-        display: flex;
-        flex-direction: column;
-        height: auto;
-        img{
-            display: none;
-        }
-        ul{
-            padding-left: 30%;
-        }
+
+    .shop {
+        margin-top: 230%;
     }
 }

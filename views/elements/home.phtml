@@ -18,12 +18,12 @@
  
 <div class="list_roman">
     <?php foreach($romans as $roman): ?>
-    <div class="list">
+    <div id="list">
         <h1>0<?= $roman['id'] ?></h1>
         <h2><?= $roman['title'] ?></h2>
         <br>
-        <i class="fas fa-angle-up" id="next"></i>
-        <i class="fas fa-angle-down" id="prev"></i>
+        <i class="fas fa-angle-up"></i>
+        <i class="fas fa-angle-down"></i>
         <p><?= $roman['resum'] ?><br><br>
         <a href="/jean-forteroche/chapitres"><i class="fas fa-long-arrow-alt-right"></i> Lire le roman</a></p>
     </div>
@@ -42,15 +42,15 @@
 <div class="shop">
     <ul>
         <li><img src="public/assets/img/book1.jpg" title="©Julia Assad">
-            <p>“On se reverra”<br><span id="price">10.90€</span></p><button>Acheter <i
+            <p>“L’écho de ton souvenir”<br><span id="price">10.90€</span></p><button>Acheter <i
                     class="fas fa-shopping-cart"></i></button>
         </li>
         <li><img src="public/assets/img/book2.jpg" title="©Julia Assad">
-            <p>“L’écho de ton souvenir”<br><span id="price">11.90€</span></p><button>Acheter <i
+            <p>“L’enfant qui venait des étoiles”<br><span id="price">11.90€</span></p><button>Acheter <i
                     class="fas fa-shopping-cart"></i></button>
         </li>
         <li><img src="public/assets/img/book3.jpg" title="©Julia Assad">
-            <p>“L’enfant qui venait des étoiles”<br><span id="price">10.90€</span></p><button>Acheter <i
+            <p>“On se reverra”<br><span id="price">10.90€</span></p><button>Acheter <i
                     class="fas fa-shopping-cart"></i></button>
         </li>
     </ul>
