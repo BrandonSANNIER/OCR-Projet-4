@@ -130,12 +130,12 @@ header {
 
 .list_roman {
     background-color: $color-white;
-    padding-top: 10%;
+    padding: 10% 0;
     #list {
         display: none;
         margin-left: 15%;
         width: 65%;
-
+        position: relative;
         h1 {
             @include font(144px, 400, 24px, $color-black);
             font-family: "Open Sans";
@@ -148,7 +148,7 @@ header {
             display: inline-block;
             vertical-align: top;
             text-transform: uppercase;
-            width: 55%;
+            width: 520px;
         }
 
         i {
@@ -177,9 +177,9 @@ header {
             @include font(20px, 200, 30px, $color-black);
             position: absolute;
             font-family: "Open Sans";
-            top: 140%;
-            left: 26.4%;
-            width: 30%;
+            top: 58%;
+            left: 210px;
+            width: 510px;
         }
 
         a {
@@ -266,7 +266,7 @@ header {
 /*----------------------------BOUTIQUE-----------------------------*/
 
 .shop {
-    margin-top: 16%;
+    margin-top: 7%;
     width: 100%;
     background-color: $color-grey;
 
@@ -274,11 +274,12 @@ header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        flex-wrap: wrap;
         margin: 0;
-        padding: 5% 15% 5% 15%;
+        padding: 5% 10% 5% 10%;
         list-style: none;
-
         li {
+            padding: 10px;
             p {
                 margin: 0;
                 @include font(20px, 200, 30px, $color-black);
